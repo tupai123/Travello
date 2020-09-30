@@ -2,21 +2,22 @@
 <html>
 <head>
     <title>Registration Form</title>
+    <div>Please Enter The Details</div>
 
 </head>
 <body>
 <form action="register" method="post">
     {% csrf_token %}
-    <input type="text" name="first_name" placeholder="First Name"><br>
-    <input type="text" name="last_name" placeholder="Last Name"><br>
-    <input type="text" name="user_name" placeholder="User Name"><br>
+    <input type="text" name="first_name" placeholder="First Person's Name"><br>
+    <input type="text" name="last_name" placeholder="Last Person Name"><br>
+    <input type="text" name="user_name" placeholder="User's Name"><br>
     <input type="email" name="email" placeholder="Email"><br>
     <input type="password" name="password1" placeholder="Password"><br>
     <input type="password" name="password2" placeholder="Confirm Password"><br>
     <input type='submit'>
 </form>
 {% for message in messages %}
-<h2><b>{{message}}</b></h2>
+    <h2><u><b>{{message}}</b></u></h2>
 {% endfor %}
 </body>
 </html>
